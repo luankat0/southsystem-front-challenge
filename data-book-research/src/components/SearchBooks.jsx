@@ -92,20 +92,25 @@ const SearchBooks = () => {
                 </div>
             ) : (
                 <>
-                    <input
-                        type="text"
-                        value={query}
-                        onChange={handleSearch}
-                        placeholder="Digite o nome do Livro..."
-                        className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
+                    <hr></hr>
+                    <div className="flex items-center justify-center min-h-screen">
+                        <div className="w-full sm:w-1/2 lg:w-1/3 px-4">
+                            <input
+                                type="text"
+                                value={query}
+                                onChange={handleSearch}
+                                placeholder="Digite o nome do Livro..."
+                                className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
 
-                    <button
-                        onClick={() => setShowFavorites(!showFavorites)}
-                        className="mt-3 w-full sm:w-auto px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
-                    >
-                        {showFavorites ? "Mostrar todos" : "Mostrar Favoritos"}
-                    </button>
+                            <button
+                                onClick={() => setShowFavorites(!showFavorites)}
+                                className="mt-3 w-full sm:w-auto px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
+                            >
+                                {showFavorites ? "Mostrar todos" : "Mostrar Favoritos"}
+                            </button>
+                        </div>
+                    </div>
 
                     <div className="mt-4 space-y-3">
                         {(showFavorites ? favorites : books).map((book) => (
@@ -127,24 +132,47 @@ const SearchBooks = () => {
                         ))}
                     </div>
 
-                    <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-                        <button
-                            onClick={() => changePage(page - 1)}
-                            disabled={page === 0}
-                            className={`w-full sm:w-auto px-4 py-2 rounded-lg ${
-                                page === 0
-                                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                                : "bg-blue-600 text-white hover:bg-blue-700 transition"
-                            }`}
-                        >
-                            Anterior
-                        </button>
-                        <button
-                            onClick={() => changePage(page + 1)}
-                            className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-                        >
-                            Próximo
-                        </button>
+                    <div className="pagination-container">
+                        <div className="pagination-wrapper">
+                            <button 
+                                onClick={() => changePage(page - 1)}
+                                disabled={page === 0}
+                                className="nav-button"
+                            >
+                                Anterior
+                            </button>
+                            
+                            <div className="pagination-numbers">
+                                {page > 0 && (
+                                    <button 
+                                        onClick={() => changePage(page - 1)}
+                                        className="page-button"
+                                    >
+                                    {page}
+                                </button>
+                            )}
+                            
+                                <button 
+                                    className="page-button active"
+                                >
+                                    {page + 1}
+                                </button>
+                            
+                                <button 
+                                    onClick={() => changePage(page + 1)}
+                                    className="page-button"
+                                >
+                                    {page + 2}
+                                </button>
+                            </div>
+                            
+                            <button 
+                                onClick={() => changePage(page + 1)}
+                                className="nav-button"
+                            >
+                                Próximo
+                            </button>
+                        </div>
                     </div>
                 </>
             )}

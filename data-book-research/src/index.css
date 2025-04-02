@@ -13,6 +13,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #242424;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  display: block; /* Remove o flex, que estava centralizando tudo */
+  min-width: 320px;
+  min-height: 100vh;
+  padding-top: 100px; /* Garante espaço abaixo do header fixo */
+  background-color: #242424;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -20,19 +51,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -52,6 +70,12 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 @media (prefers-color-scheme: light) {
