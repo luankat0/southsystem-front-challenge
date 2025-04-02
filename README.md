@@ -1,1 +1,0 @@
-# southsystem-front-challenge
