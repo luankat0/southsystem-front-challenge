@@ -1,195 +1,194 @@
 body {
-  margin: 0;
-  display: block;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #242424;
-  padding-top: 100px; /* Espaço para o header fixo */
-  padding-bottom: 80px; /* Espaço para a navegação fixa no bottom */
+    margin: 0;
+    display: block;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #242424;
+    padding-top: 100px;
+    padding-bottom: 80px; 
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1a1a1a;
-  padding: 15px 0;
-  text-align: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 1.1;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .book-list {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .book {
-  background-color: #1e1e1e;
-  padding: 15px;
-  margin: 10px 0;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  transition: transform 0.2s ease-in-out;
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
 .book:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 8px;
-  border: 1px solid #fff;
-  background-color: #222;
-  color: #fff;
-  font-size: 1rem;
-  margin-right: 10px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    margin-right: 10px;
 }
 
-/* Estilos de botão unificados */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #6200ea;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #6200ea;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-  background-color: #3700b3;
-  border-color: #646cff;
+    background-color: #3700b3;
+    border-color: #646cff;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
 button:disabled {
-  background-color: #595959;
-  color: #a0a0a0;
-  cursor: not-allowed;
+    background-color: #595959;
+    color: #a0a0a0;
+    cursor: not-allowed;
 }
 
-/* Estilos específicos para a paginação fixa no bottom */
+
 .pagination-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1a1a1a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-  z-index: 900;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 900;
 }
 
 .pagination-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
 }
 
 .pagination-numbers {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 .page-button {
-  min-width: 40px;
-  text-align: center;
+    min-width: 40px;
+    text-align: center;
 }
 
 .page-button.active {
-  background-color: #3700b3;
+    background-color: #3700b3;
 }
 
 .nav-button {
-  background-color: #4a4a4a;
+    background-color: #4a4a4a;
 }
 
 .nav-button:hover:not(:disabled) {
-  background-color: #6200ea;
+    background-color: #6200ea;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  .nav-button, button.active {
-    background-color: #6200ea;
-    color: white;
-  }
-  .pagination-container {
-    background-color: #f0f0f0;
-  }
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    .nav-button, button.active {
+        background-color: #6200ea;
+        color: white;
+    }
+    .pagination-container {
+        background-color: #f0f0f0;
+    }
 }
 
 /* Media query para dispositivos móveis */
 @media (max-width: 768px) {
-  .pagination-wrapper {
-    flex-direction: row;
-    width: 95%;
-  }
+    .pagination-wrapper {
+        flex-direction: row;
+        width: 95%;
+    }
   
-  .page-button {
-    min-width: 30px;
-    padding: 0.5em 0.8em;
-  }
+    .page-button {
+        min-width: 30px;
+        padding: 0.5em 0.8em;
+    }
   
-  .nav-button {
-    padding: 0.5em 0.8em;
-    font-size: 0.9em;
-  }
+    .nav-button {
+        padding: 0.5em 0.8em;
+        font-size: 0.9em;
+    }
 }
